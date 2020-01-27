@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use('/api', require('../src/routes/routes'));
 
 app.set("port", PORT);
-app.listen(PORT, console.log(`Server running on http://${HOST}:${PORT}`));
+app.listen(PORT, console.log(`Server running on http://${HOST}:${PORT}/api/visited`));
 
 start();
 
