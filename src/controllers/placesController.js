@@ -2,7 +2,7 @@ const visited = require("../models/Place");
 
 exports.get = (req, res) => {
     const request = getUrlAttributes(req);
-    if ((JSON.stringify(request).length > 5) && (!request.hasOwnProperty('page')) && (!request.hasOwnProperty('limit'))) {
+    if ((Object.keys(request).length > 0) && (!request.hasOwnProperty('page')) && (!request.hasOwnProperty('limit'))) {
         getByAttribute(request, res);
     } else {
         getAll(req, res);
